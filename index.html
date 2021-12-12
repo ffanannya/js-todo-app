@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anannya's Todo App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">                
+</head>
+
+<body>
+    <div class="container row d-flex justify-content-center mx-auto pt-5">
+        <div class="col-xs-9 col-md-7">
+            <div class="card mb-0">
+                <div class="card-header pt-2">
+                    <div class="card-header-title task-header h4 text-center float-start">My Tasks</div>
+                    <button id="newTaskButton" class="d-block border-0 btn-transition btn btn-outline-success float-end" data-bs-toggle="modal" data-bs-target="#newTaskModal"><i class="fa fa-plus"></i></button>
+                </div>
+                <div class="card-body" data-bs-spy="scroll" data-bs-target=".card-header" data-bs-offset="50">
+                    <ul class=" list-group list-group-flush" id="tasks">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="modal" tabindex="-1" id="newTaskModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Add a new task</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="list-group-item mt-0">
+                                <label for="text" class="form-label">Task Name:</label>
+                                <input id="newTaskTitle" type="text" class="form-control" placeholder="Enter New Task">
+                            </div>
+                            <div class="list-group-item mt-0">
+                                <label for="text" class="form-label">Tag</label>
+                                <select id="newTaskTag" class="form-select" aria-label="Default select example">
+                                    <option value="Important">Important</option>
+                                    <option value="New">New</option>
+                                    <option value="Emergency">Emergency</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="newTaskSaveButton" type="button" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
